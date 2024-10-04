@@ -1,10 +1,10 @@
 const express = require('express');
-const env = require('dotenv');
-const mongoose = require('mongoose');
+//const env = require('dotenv');
+//const mongoose = require('mongoose');
 
 const app = express();
 
-const DB = process.env.DATABASE.replace('<password>', process.env.PASSWORD);
+/*const DB = process.env.DATABASE.replace('<password>', process.env.PASSWORD);
 
 async (demo) => {
     try{
@@ -20,11 +20,12 @@ async (demo) => {
 }
 
 demo();
+*/
 
 app.get('/', (req,res) => {
     res.send('hello world');
 });
 
-app.listen(process.env.port, () => 
-    console.log('Example app listening on port')
-);
+app.listen(3000, () => {
+    console.log('Example app listening on port');
+});
