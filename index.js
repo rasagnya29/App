@@ -1,14 +1,28 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const db = require('./db');
-const routes = require('./routes');
+const express= require('express');
+const mongoose= require('mongoose');
 
-const app = express();
+const app=express();
 
-app.use(bodyParser.json());
+const port=8000;
+const url= "mongodb://localhost:0.0.0.0/0";
 
-app.use('/', routes);
+mongoose.connect(url,{useNewUrlParser: true});
+const con= mongoose.connection;
+app.use(express.json());
+try{
+    con.on('open',() => {
+        console.log('connected');
+    })
+}catch(error)
+{
+    console.log("Error: "+error);
+}
 
-app.listen(3000, () => {
-  console.log('Server started on port 3000');
-});
+const employeerouter= require("./routes/employees");
+app.use('/employees',employeerouter)
+
+
+
+app.listen(port, () =>{
+    console.log('Server started');
+})
