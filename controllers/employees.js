@@ -7,7 +7,7 @@ const router= express.Router();
 
 const getEmployees = async (req, res) => {
     try {
-        const employee= await employee.find();
+        const employee= await Employee.find();
         
         res.status(200).json(employee);
     } catch(error) {
