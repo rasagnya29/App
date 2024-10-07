@@ -3,10 +3,9 @@ const mongoose= require('mongoose');
 
 const app=express();
 
-const port=8000;
-const url= "mongodb://localhost:0.0.0.0/0";
+const port=8080;
 
-mongoose.connect(url,{useNewUrlParser: true});
+mongoose.connect('mongodb+srv://user1:rassu123@cluster0.a6fdc.mongodb.net/user1?retryWrites=true&w=majority&appName=Cluster0');
 const con= mongoose.connection;
 app.use(express.json());
 try{
