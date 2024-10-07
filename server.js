@@ -15,7 +15,7 @@ connectDB()
 .catch(err => console.log("can not connect",err));
 
 async function connectDB() {
-  await mongoose.connect('mongodb+srv://rasagnyanerella:CAYJ5DcmW5vfIFEq@cluster0.a6fdc.mongodb.net/');
+  await mongoose.connect('mongodb+srv://rasagnyanerella:CAYJ5DcmW5vfIFEq@cluster0.a6fdc.mongodb.net/user1?retryWrites=true&w=majority&appName=Cluster0');
 }
 
 
