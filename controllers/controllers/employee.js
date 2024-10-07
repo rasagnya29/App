@@ -27,7 +27,7 @@ const getspecEmployee = async (req,res) => {
     }
 }
 
-const createemployee =  async (req, res) => {
+const createEmployee =  async (req, res) => {
     console.log(req.body);
     const newemployee = new Employee({
         name:req.body.name,
@@ -80,7 +80,7 @@ const deleteEmployee = async (req, res) => {
 }
 
 module.exports.getEmployees= getEmployees;
-module.exports.createemployee= createemployee;
+module.exports.createEmployee= createEmployee;
 module.exports.getspecEmployee= getspecEmployee;
 module.exports.updateEmployee= updateEmployee;
 module.exports.deleteEmployee= deleteEmployee;
