@@ -15,9 +15,7 @@ connectDB()
 .catch(err => console.log("can not connect",err));
 
 async function connectDB() {
-  await mongoose.connect('mongodb+srv://rasagnyanerella:<db_password>@cluster0.a6fdc.mongodb.net/');
-  //await mongoose.connect('mongodb://152.58.196.57/32://rasagnyanerella:<CAYJ5DcmW5vfIFEq>@cluster0.a6fdc.mongodb.net/');
-
+  await mongoose.connect('mongodb+srv://rasagnyanerella:CAYJ5DcmW5vfIFEq@cluster0.a6fdc.mongodb.net/');
 }
 
 
