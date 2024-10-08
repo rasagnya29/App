@@ -11,7 +11,7 @@ const getEmployees = async (req, res) => {
         
         res.status(200).json(employee);
     } catch(error) {
-        res.status(404).console.log(error).json({message: error.message});
+        res.status(404).console.log(error);
     }
 }
 
@@ -23,7 +23,7 @@ const getspecEmployee = async (req,res) => {
 
         res.status(200).json(emp);
     } catch(error) {
-        res.status(404).console.log(error).json({ message: error.message});
+        res.status(404).console.log(error);
     }
 }
 
@@ -42,7 +42,7 @@ const createEmployee =  async (req, res) => {
         res.status(201).json(newemployee);
 
     } catch(error) {
-        res.status(400).console.log(error).json({ message : error.message});
+        res.status(400).console.log(error);
     }
 
 }
@@ -62,7 +62,7 @@ const updateEmployee = async (req, res) => {
         res.status(202).json({id: id});
 
     } catch (error) {
-        res.status(401).console.log(error).json({message: error.message});
+        res.status(401).console.log(error);
     }
     
 }
@@ -75,7 +75,7 @@ const deleteEmployee = async (req, res) => {
         res.status(203).json({id:id});
 
     }catch(error) {
-        res.status(402).console.log(error).json({message: error.message});
+        res.status(402).console.log(error);
     }
 }
 
